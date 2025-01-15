@@ -1,6 +1,10 @@
-<div class="div container-fluid bg-body-tertiary card min-vh-100 border-0 rounded-0"
-  [attr.data-bs-theme]="theme.isDarkMode()">
+<div
+  class="div container-fluid bg-body-tertiary card min-vh-100 border-0 rounded-0"
+  [attr.data-bs-theme]="theme.isDarkMode()"
+>
   <app-header></app-header>
-  <app-dashboard></app-dashboard>
+  <!-- <app-dashboard></app-dashboard> -->
+  <!-- <app-instructions></app-instructions> -->
+  <app-q-card></app-q-card>
   <router-outlet />
 </div>

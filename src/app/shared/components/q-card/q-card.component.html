@@ -1,0 +1,92 @@
+@if (currentQuestion) {
+
+<div>
+  <!-- <app-timer [timeInterval]="600"></app-timer> -->
+
+  <div
+    class="div d-flex justify-content-center align-items-center gap-2 flex-wrap my-4"
+  >
+    @for (item of totalQuestions; track $index) {
+
+    <label
+      for="item"
+      class="d-flex justify-content-center align-items-center border border-1 rounded-circle"
+      style="width: 3.5rem; height: 3.5rem"
+      type="button"
+      >{{ $index + 1 }}</label
+    >
+    }
+  </div>
+
+  <p-card
+    [style]="{ width: '35rem', overflow: 'hidden' }"
+    class="d-flex justify-content-center"
+  >
+    <ng-template #title> Question Id: {{currentQuestion.id}}</ng-template>
+
+    <ng-template #subtitle>
+      Difficulty Level: {{ currentQuestion.difficulty }}
+    </ng-template>
+
+    <p>{{ currentQuestion.question }}</p>
+
+    @for (option of getAnswers (currentQuestion.answers); track
+    trackById($index, option)) {
+    <div class="mb-2">
+      <p-radiobutton
+        [inputId]="$index.toString()"
+        name="category"
+        [value]="$index"
+        [(ngModel)]="selectedoption"
+      />
+      <span> {{ option }} </span>
+    </div>
+
+    }
+
+    <ng-template #footer>
+      <div class="d-flex justify-content-between gap-4 mt-1">
+        <p-button
+          label="Next"
+          class="w-full"
+          styleclass="w-full me-5"
+          (onClick)="nextQuestion()"
+        />
+
+        <p-button
+          label="Reset"
+          severity="secondary"
+          class="w-full"
+          [outlined]="true"
+          styleClass="w-full"
+          (onclick)="resetOptions()"
+        />
+      </div>
+    </ng-template>
+
+    <p>{{ currentQuestion.tip }}</p>
+  </p-card>
+
+  <p-button label="Give Up!!!" class="d-flex justify-content-center mt-3" />
+</div>
+}@else if (showScore()) {
+
+<p-card
+  [style]="{ width: '35rem', overflow: 'hidden' }"
+  class="d-flex justify-content-center"
+>
+  Congratulations! You have Successfully completed the quiz
+
+  <p>Total Questions Attempted: {{ NoOfCorrectQues + NoOfIncorrectQues }}</p>
+
+  <p>Total Questions Correct: {{ NoOfCorrectQues }}</p>
+
+  <p>Total Questions Incorrect: {{NoOfIncorrectQues}}</p>
+
+  <p-button
+    label="Go To Dashboard"
+    class="d-flex justify-content-center mt-3"
+  />
+</p-card>
+
+}

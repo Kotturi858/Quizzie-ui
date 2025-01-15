@@ -1,0 +1,58 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "description": "Geography question about European capitals.",
+      "answers": {
+        "answer_a": "Berlin",
+        "answer_b": "Madrid",
+        "answer_c": "Paris",
+        "answer_d": "Rome",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "false",
+        "answer_c_correct": "true",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "explanation": "Paris is the capital of France.",
+      "tip": null,
+      "tags": ["geography", "capitals"],
+      "category": "Geography",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "question": "Which planet is known as the Red Planet?",
+      "description": "Astronomy question about planets.",
+      "answers": {
+        "answer_a": "Earth",
+        "answer_b": "Mars",
+        "answer_c": "Jupiter",
+        "answer_d": "Saturn",
+        "answer_e": null,
+        "answer_f": null
+      },
+      "multiple_correct_answers": "false",
+      "correct_answers": {
+        "answer_a_correct": "false",
+        "answer_b_correct": "true",
+        "answer_c_correct": "false",
+        "answer_d_correct": "false",
+        "answer_e_correct": "false",
+        "answer_f_correct": "false"
+      },
+      "explanation": "Mars is known as the Red Planet due to its reddish appearance.",
+      "tip": null,
+      "tags": ["astronomy", "planets"],
+      "category": "Science",
+      "difficulty": "medium"
+    }
+  ]
+}

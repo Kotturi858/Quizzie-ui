@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, effect, inject } from '@angular/core';
-import { ChartData, ChartOptions } from 'chart.js';
-import { BaseChartDirective } from 'ng2-charts';
 import { ThemeService } from '../../shared/services/theme.service';
 
 @Component({
