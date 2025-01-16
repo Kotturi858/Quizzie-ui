@@ -1,0 +1,50 @@
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 90vh"
+>
+  <!-- <h1>(*^_^*)</h1> -->
+  <div class="card border border-2 shadow-lg" style="width: 28rem">
+    <div class="card-header border">Login</div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text">&#64;</span>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInputGroup1"
+            placeholder="Username"
+          />
+          <label for="floatingInputGroup1">Username</label>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <span
+          class="input-group-text material-symbols-outlined btn:focus"
+          role="button"
+          (click)="toggleVisibility($event)"
+          >{{ visibility ? "visibility" : "visibility_off" }}</span
+        >
+        <div class="form-floating">
+          <input
+            [type]="visibility ? 'text' : 'Password'"
+            class="form-control"
+            id="floatingInputGroup2"
+            placeholder="Password"
+          />
+          <label>Password</label>
+        </div>
+      </div>
+      <h6 class="card-title">
+        Wanna Start Learning?
+        <p-button
+          label="Register!"
+          variant="text"
+          severity="info"
+          size="small"
+        ></p-button>
+      </h6>
+      <p-button label="LOGIN"></p-button>
+    </div>
+  </div>
+</div>
