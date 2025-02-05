@@ -22,7 +22,7 @@
         <span
           class="input-group-text material-symbols-outlined btn:focus"
           role="button"
-          (click)="toggleVisibility($event)"
+          (click)="toggleVisibility()"
           >{{ visibility ? "visibility" : "visibility_off" }}</span
         >
         <div class="form-floating">
@@ -41,7 +41,7 @@
           label="Register!"
           variant="text"
           severity="info"
-          size="small"
+          size="small" (click)="register()"
         ></p-button>
       </h6>
       <p-button label="LOGIN"></p-button>
