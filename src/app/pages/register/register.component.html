@@ -1,2 +1,84 @@
-
-<p-progressbar [value]="50" severity="info" [color]="'white'"/>
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 90vh"
+>
+  <!-- <h1>(*^_^*)</h1> -->
+  <div class="card border border-2 shadow-lg" style="width: 28rem">
+    <div class="card-header border">Login</div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text material-symbols-outlined">
+          account_circle
+        </span>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInputGroup1"
+            placeholder="Username"
+          />
+          <label for="floatingInputGroup1">Username</label>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text material-symbols-outlined">
+          alternate_email
+        </span>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInputGroup1"
+            placeholder="Email"
+          />
+          <label for="floatingInputGroup1">Email</label>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <span
+          class="input-group-text material-symbols-outlined btn:focus"
+          role="button"
+          (click)="toggleVisibility()"
+          >{{ visibility ? "visibility" : "visibility_off" }}</span
+        >
+        <div class="form-floating">
+          <input
+            [type]="visibility ? 'Password' : 'text'"
+            class="form-control"
+            id="floatingInputGroup2"
+            placeholder="Password"
+          />
+          <label>Password</label>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <span
+          class="input-group-text material-symbols-outlined btn:focus"
+          role="button"
+          (click)="toggleVisibility()"
+          >{{ visibility ? "visibility" : "visibility_off" }}</span
+        >
+        <div class="form-floating">
+          <input
+            [type]="visibility ? 'Password' : 'text'"
+            class="form-control"
+            id="floatingInputGroup2"
+            placeholder="Password"
+          />
+          <label>Re-enter Password</label>
+        </div>
+      </div>
+      <h6 class="card-title">
+        Already Signed Up?
+        <p-button
+          label="Login!"
+          variant="text"
+          severity="info"
+          size="small"
+          (click)="register()"
+        ></p-button>
+      </h6>
+      <p-button label="Register"></p-button>
+    </div>
+  </div>
+</div>

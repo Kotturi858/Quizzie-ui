@@ -7,7 +7,9 @@
     <div class="card-header border">Login</div>
     <div class="card-body">
       <div class="input-group mb-3">
-        <span class="input-group-text">&#64;</span>
+        <span class="input-group-text material-symbols-outlined">
+          account_circle
+        </span>
         <div class="form-floating">
           <input
             type="text"
@@ -23,11 +25,11 @@
           class="input-group-text material-symbols-outlined btn:focus"
           role="button"
           (click)="toggleVisibility()"
-          >{{ visibility ? "visibility" : "visibility_off" }}</span
+          >{{ visibility ? "visibility_off" : "visibility" }}</span
         >
         <div class="form-floating">
           <input
-            [type]="visibility ? 'text' : 'Password'"
+            [type]="visibility ? 'Password' : 'text'"
             class="form-control"
             id="floatingInputGroup2"
             placeholder="Password"
@@ -41,7 +43,8 @@
           label="Register!"
           variant="text"
           severity="info"
-          size="small" (click)="register()"
+          size="small"
+          (click)="register()"
         ></p-button>
       </h6>
       <p-button label="LOGIN"></p-button>
