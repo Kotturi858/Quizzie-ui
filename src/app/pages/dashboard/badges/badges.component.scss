@@ -1,0 +1,6 @@
+.badge-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(3, 1fr); /* 4 rows */
+  gap: 10px; /* Space between badges */
+}

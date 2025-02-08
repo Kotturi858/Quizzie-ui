@@ -1,32 +1,16 @@
-<div class="container h-100">
-    <h1 class="d-flex justify-content-center mb-0">YOUR
-        SCORE: 100<div>&percnt;</div>
-    </h1>
-    <div class="col-12 col-md-6 flex-md-row flex-column d-flex justify-content-center mx-auto gap-3"
-        style="width: 200px;">
-        <div class="dropdown">
-            <button class="btn dropdown-toggle mx-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{selectedLanguage}}
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    @for(doc of availableLanguages; track doc) {
-                    <button class="dropdown-item" (click)="onselectedItem(doc)" role="button"
-                        [ngClass]="{active : doc === selectedLanguage}">{{doc}}</button>
-                    }
-                </li>
-            </ul>
-        </div>
-
-        <div class="dropdown">
-            <button class="btn dropdown-toggle mx-2" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                [disabled]="selectedLanguage === 'Select Language'">
-                Select Task
-            </button>
-            <ul class="dropdown-menu">
-                <li><button class="dropdown-item" role="button">Take Test!</button></li>
-                <li><button class="dropdown-item" role="button" disabled>Check stats</button></li>
-            </ul>
-        </div>
+<div class="dashborad">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-lg-6 col-12 p-auto">
+      <app-basic></app-basic>
     </div>
+    <div class="col-lg-6 col-12 m-auto p-auto">
+      <app-stats></app-stats>
+    </div>
+    <div class="col-lg-6 col-12 py-auto">
+      <app-badges></app-badges>
+    </div>
+    <div class="col-lg-6 col-12 m-auto">
+      <app-leaderboard></app-leaderboard>
+    </div>
+  </div>
 </div>
