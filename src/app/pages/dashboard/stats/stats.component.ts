@@ -24,7 +24,6 @@ export class StatsComponent {
       ],
     };
 
-    // Chart 2 data
     this.data2 = {
       labels: ['May', 'June', 'July'],
       datasets: [
@@ -41,11 +40,16 @@ export class StatsComponent {
       responsive: true,
       plugins: {
         legend: {
-          position: 'left', // Shared legend position
+          position: 'left',
           labels: {
-            usePointStyle: true, // Use point style for legend items
+            usePointStyle: true,
+            color: 'rgb(75, 192, 192)',
           },
         },
+      },
+      animation: {
+        duration: 1500, // Animation duration in milliseconds (increase this value for longer animation)
+        easing: 'easeOutBounce', // You can choose different easing effects here
       },
     };
   }
