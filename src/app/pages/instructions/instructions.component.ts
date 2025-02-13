@@ -5,8 +5,10 @@ import { ButtonModule } from 'primeng/button';
   selector: 'app-instructions',
   imports: [ButtonModule],
   templateUrl: './instructions.component.html',
-  styleUrl: './instructions.component.scss'
+  styleUrl: './instructions.component.scss',
 })
 export class InstructionsComponent {
-
+  onCancel() {
+    window.history.back();
+  }
 }

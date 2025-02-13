@@ -1,5 +1,5 @@
 <div class="h-100 my-4">
-  <h1 class="d-flex justify-content-center mb-5">YOUR SCORE: 0 point(s)</h1>
+  <h1 class="d-flex justify-content-center mb-5">YOUR SCORE: {{score}} point(s)</h1>
   <div
     class="col-12 col-md-6 flex-md-row flex-column d-flex justify-content-center mx-auto gap-3"
   >
@@ -30,7 +30,7 @@
 
     <div class="dropdown text-center">
       <button
-        class="btn dropdown-toggle mx-2"
+        class="btn dropdown-toggle mx-2 border border-2"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -39,7 +39,7 @@
         Select Task
       </button>
       <ul class="dropdown-menu">
-        <li><button class="dropdown-item" role="button">Take Test!</button></li>
+        <li><button class="dropdown-item" role="button" (click)="toInstructions()">Take Test!</button></li>
         <li>
           <button class="dropdown-item" role="button" disabled>
             Check stats

@@ -31,4 +31,8 @@ export class LoginComponent {
   register() {
     this.router.navigate(['/register']);
   }
+
+  onLogin(){
+    this.router.navigate(['/dashboard']);
+  }
 }
